@@ -1,0 +1,33 @@
+<div class="jumbotron">
+    <h2>Добави Новина</h2>
+    <hr/>
+    <div class="form-group"></div>
+    <h5>Заглавие: </h5>
+    <input class="form-control" type="text" ng-model="newNews.title" />
+    <h5>Категория: </h5>
+    <select class="form-control" name="category" ng-model="newNews.category" />
+    <option value="Футбол">Футбол</option>
+    <option value="Волейбол">Волейбол</option>
+    <option value="НБА">НБА</option>
+    <option value="Тенис">Тенис</option>
+    <option value="Формула1">Формула 1</option>
+    <option value="ММА">ММА</option>
+    <option value="Зимни спортове">Зимни спортове</option>
+    </select>
+    <h5>Секция: </h5>
+    <select class="form-control" name="category" ng-model="newNews.name" />
+    <option value="football">Футбол</option>
+    <option value="volleyball">Волейбол</option>
+    <option value="nba">НБА</option>
+    <option value="tennis">Тенис</option>
+    <option value="formula">Формула 1</option>
+    <option value="mma">ММА</option>
+    <option value="winter-sports">Зимни спортове</option>
+    </select>
+    <h5>Снимка url: </h5>
+    <input class="form-control" type="text" ng-model="newNews.imgUrl" />
+    <h5>Съдържание: </h5>
+    <textarea class="form-control" ng-model="newNews.content" cols="30" rows="5"></textarea><br/>
+    <button class="btn btn-lg btn-primary" ng-click="addNews()">Добави новина</button>
+</div>
+</div>

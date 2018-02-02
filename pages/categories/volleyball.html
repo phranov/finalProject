@@ -1,0 +1,20 @@
+<!--<main role="main" class="container">
+    <div class="row">
+        <div class="col-sm-10">-->
+<div class="jumbotron">
+    <h1>Волейбол</h1>
+    <ul ng-repeat="new in newsList | filter: { name:'volleyball' }">
+        <div class="container border border-dark">
+            <h1>{{ new.title }}</h1>
+            <p>{{ new.category }}</p>
+            <img src="{{ new.imgUrl }}" class="align-self-center" />
+            <hr/>
+            <p>{{ new.content }}</p>
+            <p>{{ new.date }}</p>
+        </div>
+        <hr/>
+    </ul>
+</div>
+<!--</div>
+    </div>
+</main>-->

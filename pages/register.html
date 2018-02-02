@@ -1,0 +1,13 @@
+<div class="jumbotron">
+    <form class="form-signin">
+        <h2 class="form-signin-heading">Регистрация</h2>
+        <hr />
+        <label for="inputEmail" class="sr-only">Име</label>
+        <input type="text" ng-model="newUser.username" id="regUsername" class="form-control" placeholder="Име" required autofocus><br/>
+        <label for="inputPassword" class="sr-only">Парола</label>
+        <input type="password" ng-model="newUser.password" id="regPasswor" class="form-control" placeholder="Парола" required><br/>
+        <label for="inputEmail" class="sr-only">Е-майл</label>
+        <input type="email" ng-model="newUser.email" id="regEmail" class="form-control" placeholder="Е-майл" required autofocus><br/>
+        <button class="btn btn-lg btn-primary" id="edit-button" ng-click="regUser()">Регистрирай се</button>
+    </form>
+</div>

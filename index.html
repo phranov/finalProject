@@ -2,100 +2,89 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Sport.bg</title>
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> -->
-  <link rel="stylesheet" href="https://bootswatch.com/slate/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SNews.bg</title>
+
+    <link rel='icon' type='image/x-icon' href='assets/images/favicon.png' />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+
 </head>
 
-<body>
+<body ng-app="sportApp">
+    <div class="container">
 
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Sport.bg</a>
-      </div>
+        <header class="masthead">
+            <!--<h3 class="text-muted">SnewS.bg</h3>-->
+            <a href="#!/"> <img id='logo-img' src="assets/images/logo.png" alt="logo"> </a>
 
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li>
-            <a href="#a" class="page">Link A</a>
-          </li>
-          <li>
-            <a href="#b" class="page">Link B</a>
-          </li>
-          <li>
-            <a href="#c" class="page">Link C</a>
-          </li>
-          <li>
-            <a href="#d" class="page">Link D</a>
-          </li>
-          <li>
-            <a href="#e" class="page">Link E</a>
-          </li>
-        </ul>
-        <form id="signin" class="navbar-form navbar-right" role="form">
-          <div class="input-group">
-            <span class="input-group-addon">
-              <i class="glyphicon glyphicon-user"></i>
-            </span>
-            <input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">
-          </div>
+            <nav id='first-nav' class="navbar navbar-expand-md navbar-light bg-light rounded mb-3">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id='second-nav' class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav text-md-center nav-justified w-100">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!/">Начало</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!/news">Новини</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!/addNews">Добави Новина</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sign" id="sign" href="#!/login">Вход</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sign" id="sign" href="#!/register">Регистрация</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
-          <div class="input-group">
-            <span class="input-group-addon">
-              <i class="glyphicon glyphicon-lock"></i>
-            </span>
-            <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">
-          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="list-group ">
+                        <a href="#!/football" class="list-group-item category ">Футбол</a>
+                        <a href="#!/volleyball" class="list-group-item category ">Волейбол</a>
+                        <a href="#!/nba" class="list-group-item category ">НБА</a>
+                        <a href="#!/tennis" class="list-group-item category ">Тенис</a>
+                        <a href="#!/formula" class="list-group-item category ">Формула 1</a>
+                        <a href="#!/mma" class="list-group-item category ">MMA</a>
+                        <a href="#!/winter-sports" class="list-group-item category ">Зимни спортове</a>
 
-          <button id="loginButton" type="submit" class="btn btn-primary">Login</button>
-          <button id="register" type="submit" class="btn btn-primary">Register</button>
-        </form>
-      </div>
-    </div>
-  </nav>
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <div ng-view class="jumbotron">
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-2">
-        <div class="list-group">
-            <a href="#" class="list-group-item category">Football</a>
-            <a href="#" class="list-group-item category">Volleyboall</a>
-            <a href="#" class="list-group-item category">NBA</a>
-            <a href="#" class="list-group-item category">Tennis</a>
-            <a href="#" class="list-group-item category">F1</a>
-            <a href="#" class="list-group-item category">MMA</a>
-            <a href="#" class="list-group-item category">Winter Sports</a>
-          </div>
-    </div>
-    <div class="col-sm-10">
-      <div class="jumbotron">
-        <h1>Sport.bg</h1>
-        <p>Спортният портал на България.</p>
-      </div>
-    </div>
-  </div>
-</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-    crossorigin="anonymous"></script>
-  <script src="loginService.js"></script>
-  <script src="loginController.js"></script>
-  <script src="main.js"></script>
+
+
+
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/popper.js/dist/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="app/app.js"></script>
+        <script src="app/controllers.js"></script>
+        <script src="app/routes.js"></script>
+        <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
